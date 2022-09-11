@@ -7,25 +7,24 @@ include("conexao.php");
 
 //obter os dados do formulário
 
-$login = "";
-$senha = "";
-if(isset($_POST["usuario"])){
-$login = addslashes(trim($_POST["usuario"]));
-}
-if(isset($_POST["senha"])){
-$senha = md5(trim($_POST["senha"]));
-}
+$login = $_POST["usuario"];
+$senha = $_POST["senha"];
+
 
 //validar o usuário no BD
 
 $sql = "SELECT * FROM usuario WHERE usuario='$login' AND senha='$senha'";
+
 $result = $con->query($sql);
+
 $total_de_usuarios = $result->num_rows;
 if($total_de_usuarios == 1){
     $dados = $result->fetch_assoc();
-    //salva os dados na sessão
-    $_SESSION["usuario"] = $dados["usuario"];
-    $_SESSION["senha"] = $dados["senha"];
+    //salva os dados nos cookies
+    setcookie("usuario", $dados["usuario"]);
+    setcookie("senha", $dados["senha"]);
+
+    
     //redirecionar para a página restrita
     header("Location: pagina1.php");
     exit;

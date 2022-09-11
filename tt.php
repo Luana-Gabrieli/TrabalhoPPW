@@ -13,7 +13,7 @@
  $servidor_bd = "localhost";
  $login_bd = "root";
  $senha_bd = "";
- $banco_de_dados = "cep";
+ $banco_de_dados = "sistemarestrito";
  
  $con = new mysqli($servidor_bd, $login_bd, $senha_bd, $banco_de_dados);
  

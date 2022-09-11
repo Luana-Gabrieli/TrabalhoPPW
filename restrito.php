@@ -1,7 +1,7 @@
 <?php
 session_start();
 //testar se os dados estão na sessão
-if(!isset($_SESSION["usuario"]) || !isset($_SESSION["senha"])){
+if(!isset($_COOKIE["usuario"]) || !isset($_COOKIE["senha"])){
 //redireciona para a página de login
 /*
 header("Location: index.php");

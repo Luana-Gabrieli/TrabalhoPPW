@@ -30,14 +30,16 @@ background: #ccc; cursor: pointer; border-radius: 5px; }
 </style>
 </head>
 <body>
-<div id="centro">
-<div id="interno">
-<form method="post" action="valida_login.php">
-<input type="text" name="usuario" id="usuario" placeholder="Usuário" class="campotxt"/>
-<input type="password" name="senha" id="senha" placeholder="Senha" class="campotxt"/>
-<input type="submit" value="Login"/>
-</form>
-</div>
-</div>
+    <div id="centro">
+        <div id="interno">
+            <form method="post" action="valida_login.php">
+                <input type="text" name="usuario" id="usuario" placeholder="Usuário" class="campotxt"/>
+                <input type="password" name="senha" id="senha" placeholder="Senha" class="campotxt"/>
+                <input type="submit" value="Login"/>
+            </form>
+            <a href="cadastro.php"><input type="submit" value="Cadastro"/></a>
+        </div>
+        
+    </div>
 </body>
 </html>
