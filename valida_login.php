@@ -1,36 +1,25 @@
 <?php 
-session_start();
-
-//conectar no banco de dados
-
 include("conexao.php");
-
-//obter os dados do formulário
 
 $login = $_POST["usuario"];
 $senha = $_POST["senha"];
-
-
-//validar o usuário no BD
 
 $sql = "SELECT * FROM usuario WHERE usuario='$login' AND senha='$senha'";
 
 $result = $con->query($sql);
 
 $total_de_usuarios = $result->num_rows;
-if($total_de_usuarios == 1){
-    $dados = $result->fetch_assoc();
-    //salva os dados nos cookies
-    setcookie("usuario", $dados["usuario"]);
-    setcookie("senha", $dados["senha"]);
 
-    
-    //redirecionar para a página restrita
-    header("Location: pagina1.php");
-    exit;
+    if($total_de_usuarios == 1){
+        $dados = $result->fetch_assoc();
+        setcookie("usuario", $dados["usuario"]);
+        setcookie("senha", $dados["senha"]);
+
+        header("Location: pagina1.php");
+        exit;
+        }
+        else{
+        echo "<p>Usuário não encontrado</p>";
+        echo "<a href=\"index.php\">Voltar</a>";
     }
-    else{
-    echo "<p>Usuário não encontrado</p>";
-    echo "<a href=\"index.php\">Voltar</a>";
-    }
-    ?>
+?>

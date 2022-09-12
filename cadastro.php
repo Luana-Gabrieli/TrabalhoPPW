@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,9 +30,12 @@
  
         <h1> Cadastro </h1>
  
-        <form action="tt.php" method="POST">
-            <label for="nome">Nome Completo:</label>
+        <form action="insere.php" method="post">
+            <label for="nome">Nome completo:</label>
             <input type="text" id="nome" name="nome"/><br/></br>
+
+            <label for="usuario">Usuário:</label>
+            <input type="text" id="usuario" name="usuario"/><br/></br>
 
             <label for="cep">CEP: </label>
             <input type="text" name="cep" id="cep"/><br/></br>
@@ -57,10 +60,6 @@
          
  
             <input type="submit" value="Cadastrar"/>
-            </form>
-
-            
- 
- 
+        </form>
 </body>
 </html>
