@@ -15,11 +15,11 @@ $total_de_usuarios = $result->num_rows;
         setcookie("usuario", $dados["usuario"]);
         setcookie("senha", $dados["senha"]);
 
-        header("Location: pagina1.php");
+        header("Location: homepage.php");
         exit;
         }
         else{
         echo "<p>Usuário não encontrado</p>";
-        echo "<a href=\"index.php\">Voltar</a>";
+        echo "<a href=\"index.html\">Voltar</a>";
     }
 ?>

@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+    font-family: 'Taller';
+    src: url('taller_evolution_rev.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Monkey';
+  src: url('monkey.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Style the header */
+.header {
+  background-color: #709fb4;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #000000;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Taller';
+    font-weight: bolder;
+    font-style: normal;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.container{
+    font-family: 'Monkey';
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(198, 236, 236);
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+
+.column a{
+  float: left;
+    display: block;
+    color: #000000;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}

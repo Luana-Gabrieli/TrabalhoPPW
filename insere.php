@@ -33,7 +33,9 @@
                 echo "<p> Ocorreu um erro!<p>";
                 echo "<p>{$con->error}</p>";
             }
+
         ?>
-        <p> <a href="index.php"> Voltar</a> </p>
+        <p> <a href="index.html"> Voltar para o Login</a> </p>
+        <p> <a href="index.html"> Seguir para a página</a> </p>
  </body>
  </html>

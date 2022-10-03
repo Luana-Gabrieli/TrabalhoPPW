@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="estilizacao.css">
+
     <script src="jquery-3.6.0.min.js"></script>
  
     <script>
@@ -27,7 +29,8 @@
     <title>Cadastro</title>
 </head>
 <body>
- 
+    <div class="login-page">
+        <div class="form">
         <h1> Cadastro </h1>
  
         <form action="insere.php" method="post">
@@ -59,7 +62,9 @@
             <input type="password" id="senha" name="senha"/></br></br>
          
  
-            <input type="submit" value="Cadastrar"/>
+            <button type="submit">Cadastrar</button>
         </form>
+        </div>
+    </div>
 </body>
 </html>
