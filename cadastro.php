@@ -56,7 +56,7 @@
             <input type="date" id="dtnasc" name="dtnasc"/><br/></br>
 
             <label for="email">Email:</label>
-            <input type="text" id="email" name="email"/></br></br>
+            <input type="email" id="email" name="email"/></br></br>
 
             <label for="senha"> Senha:</label>
             <input type="password" id="senha" name="senha"/></br></br>
